@@ -1,0 +1,51 @@
+\title{CMPT 481 Final Writeup}
+\author{Tyler Kuipers}
+\date{\today}
+
+\documentclass[12pt]{extarticle}
+
+\begin{document}
+\maketitle
+
+
+\section{Introduction}
+	During my practicum, I participated in a collaboration research project done by Dr. Tappenden, Dr. VanArragon, and Dr. Engel from both The King’s University and The University of Alberta. I worked using software previously developed for the Atlas project. The Atlas project is a presentation of geographical and historical research using a web interface designed and built at The King’s University. This interface is designed to integrate geo-spatial information with temporal information. I worked to set up a story with Kathryn Binnema which is a demonstration that we are using to show what the project is trying to accomplish. This involved building a simple story and putting it on the server so that we can show people what the project is attempting to do.
+
+	Building the demonstration story involved uploading an overlay as a tile layer on the map. This tile layer is used to demonstrate the plots of land that were originally around Edmonton when it was a small settlement. I then drew polygons on top of the overlay. These polygons are used for displaying information about an area on a map. They can be clicked to display the information associated with that particular area. Kathryn then inputted the information regarding each of the properties into the database.  This enabled us to display relevant information when a polygon was clicked. We did this for all of the properties displayed on the overlay provided by Dr. VanArragon. After this, we put a sandbox version on the website. This version lets users play around with the website and build stories without interfering with the main demo. I also fixed bugs that arose in the software during this process.
+	\clearpage
+
+\section{The Practicum}
+	\subsection{The Overlay}
+		The practicum started with geo-rectifying the map that we were using.  Because we have more accurate mapping technology than we used to have, old maps often need to be changed to more accurately reflect the land that they are attempting to map out.  This process involves using a tool such as ESRI or QGIS to warp the map into a map that reflects the actual landscape.  These tools let you mark a point on a current map and then let you mark a point on the overlay that you are geo-rectifying.  After you enter a certain amount of these points, the technology can stretch the map to be an accurate reflection of the landscape.
+
+		After the geo-rectification is complete the map needs to be uploaded to the Internet.  For this, an open-source technology called GeoNode is employed.  This 	technology serves the overlay in tiles much like Google Maps does.  Using this, we can easily draw the layer in the atlas.
+
+		I encountered one major bug during this part of the project.  When I was testing whether or not the polygon drew properly, I found that if the user is not logged in, the overlay would not draw.  To fix this, I had to modify the way that the overlay was drawn when the user was not logged in.  I ended up using a method that was more similar to the way it draws the map when the user is still logged in.
+
+	\subsection{The Polygons}
+		After the overlay was on the map and displaying the way that it should, I drew the polygon.  The polygons were drawn on top of the overlay.  There is one drawn for each of the properties that are displayed on the map that we are using in the demo.  These are filled with Lorem Ipsum text and have the date of the story as their date.  This set up a basic story that Kathryn could then work with.
+
+	\subsection{The Information}
+		After I set up all of these polygons, I started working on the sandbox mode.  During this, the Lorem Ipsum text for the polygons was replaced with historically accurate information by Kathryn Binnema.  She went through the points and added information about the owners of each properties.  She added facts such as the dates they owned the property, and other important events relating to the owners.
+
+	\subsection{The Sandbox}
+		The sandbox is the same as the original website, but has a different database.  It is there to let the researchers work on projects that they do not want the public to see.  It lets them wait until they have a finished project before pushing it out to the public.
+
+		I ran into problems with dependencies during this portion of the project.  There were times when the program was using the wrong set of Ajax calls and was trying to insert things in the production database and not the development one.  To fix this, I had to replace those Ajax calls with ones that would hit the development server.
+\clearpage
+\section{Thing I Would Do Differently}
+	If I were to re-approach this project, I would do it a lot differently than I did.  I would have written the back-end in NodeJS.  NodeJS is a version of Javascript that runs on a server.  I would have done this because it is very modularized.  Using NodeJS, it would ave been very easy to do the sandbox.  In NodeJS, you can just copy the app, put it in a different location, change the config, and start the process.  This would have made it a lot easier to make a sandbox because all I would have had to do, is run the program with a different config file.
+
+	I also would have handled the login system differently if I had done this project again.  The difference in the way the website draws the code when a user is logged in, and when a user is not logged in, is very large at the moment, and I would change that a lot if I had to do the project again.
+
+\section{Skills Developed}
+	During this practicum, I developed a lot of skills which I will take with me during jobs in the future.  I learned a lot about what clean code is, and how to make code more readable.  I learned that it is a lot of work to keep your working directory clean, but it is worth it to do so.  In the future, if you need to re-acquaint yourself with old code, it helps a lot if that code is organized and simple to read.
+
+	I also worked a lot with skills that I have previously developed through computer science.  There was a lot of debugging that I had to do during this practicum.  In my degree, while working on assignments, I learned a lot about using console logging to find a bug and fix it.  These skills were very helpful when I was working through dependency bugs and where the map was not drawing correctly.
+
+\section{Conclusion}
+	During this practicum, I was able to test the software that I had previously built.  I was able to establish what features the software most needed, and what tasks it already accomplishes well.  It let me look at the software and see how the things it does not handle well should be handles differently, It also let me see how the things it does very well could be changed to be even better.
+
+	Throughout this practicum, I saw a lot of what a job in computer science is, and it changed a little from what I was expecting, but is still something that I want to pursue.
+
+\end{document}
