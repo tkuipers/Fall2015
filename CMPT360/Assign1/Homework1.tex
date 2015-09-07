@@ -1,9 +1,24 @@
 \documentclass[12pt]{extarticle}
-\usepackage[margin=0.5in]{geometry}
+\usepackage[margin=3cm, footskip=55pt]{geometry}
+\usepackage{fancyhdr}
+\usepackage{titling}
+\setlength{\droptitle}{-10em} 
+\pagestyle{empty}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\lfoot{Math 360 Assign 1}
+\rfoot{Page: \thepage}
 \title{CMPT 360 Assign1 Section 1\\ Question's 1, 4, 5, 6, 7, 13, 19, 21}
 \author{Tyler Kuipers}
 \date{September 8, 2015}
-
+\fancypagestyle{plain}{%
+	\renewcommand{\headrulewidth}{0pt}%
+	\fancyhf{}%
+	\lfoot{Math 360 Assign 1}
+	\rfoot{Page: \thepage}
+	% \fancyfoot[C]{\footnotesize Page \thepage\ of \pageref{LastPage}}%
+}
 
 \begin{document}
 \maketitle
@@ -22,8 +37,8 @@
 
 \section*{Question 4}
 	Let $p$ and $q$ be propositions:\\
-		\hspace*{2cm}$p$: I bought a lottery ticket this week.\\
-		\hspace*{2cm}$q$: I won the million dollar jackpot on Friday.\\
+		\hspace*{1cm}$p$: I bought a lottery ticket this week.\\
+		\hspace*{1cm}$q$: I won the million dollar jackpot on Friday.\\
 	\begin{enumerate}
 		\item I did not buy a lottery ticket this week.
 		\item I bought a lottery ticket this week or I won the lottery
@@ -37,8 +52,8 @@
 
 \section*{Question 5}
 	Let $p$ and $q$ be propositions:\\
-		\hspace*{2cm}$p$: It is below freezing.\\
-		\hspace*{2cm}$q$: It is snowing\\
+		\hspace*{1cm}$p$: It is below freezing.\\
+		\hspace*{1cm}$q$: It is snowing\\
 	\begin{enumerate}
 		\item $p \wedge q$
 		\item $p \wedge \neg q$
@@ -51,23 +66,23 @@
 
 \section*{Question 6}
 	Let $p$, $q$, and $r$ be propositions:\\
-		\hspace*{2cm}$p$: You have the flu.\\
-		\hspace*{2cm}$q$: You miss the final exam.\\
-		\hspace*{2cm}$r$: You pass the course.\\
+		\hspace*{1cm}$p$: You have the flu.\\
+		\hspace*{1cm}$q$: You miss the final exam.\\
+		\hspace*{1cm}$r$: You pass the course.\\
 	\begin{enumerate}
 		\item You have the flu so you miss the final.
 		\item You don't miss the final exam and because of this, you can't fail the course.
 		\item You miss the final so you fail the course.
 		\item You either have the flu, miss the final, or fail the course. (or any combination of those three)
 		\item You either have the flu and fail or miss the final and fail. (or both) 
-		\item You either have the flu and miss the final. or don't have the flu and pass. (or both)
+		\item You either have the flu and miss the final, or don't have the flu and pass. (or both)
 	\end{enumerate}
 	\clearpage
 
 \section*{Question 7}
 	Let $p$ and $q$ be propositions:\\
-		\hspace*{2cm}$p$: You drive over 65 mph.\\
-		\hspace*{2cm}$q$: You get a speeding ticket.\\
+		\hspace*{1cm}$p$: You drive over 65 mph.\\
+		\hspace*{1cm}$q$: You get a speeding ticket.\\
 	\begin{enumerate}
 		\item $\neg p$
 		\item $p \wedge \neg q$
@@ -77,17 +92,18 @@
 		\item $\neg p \wedge q$
 		\item $q \to p$
 	\end{enumerate}
-
+\clearpage
 \section*{Question 13}
 	Each inhabitant of a remote village always tells the truth or always lies. A villager will only give a `Yes' or a `No' response to a question a tourist asks. Suppose you are a tourist visiting this area and come to a fork in the road. One branch leads to the ruins you want to visit; the other branch leads deep into the jungle. A villager is standing at the fork in the road. What one question can you ask the villager to determine which branch to take?\\\\
 	I would ask `If I were to ask you whether the path to the right leads to the ruins, would you say yes?'\\\\
 	Let:\\
 		\hspace*{1cm}$p$ represent whether or not the villager is a liar.\\
 		\hspace*{1cm}$q$ represent whether or not the branch to the right leads to the ruins. (hidden information).\\
-		\hspace*{1cm}$r$ represent the villager's answer to the question `Does the path to the right lead to the ruins?'.\\ \\
+		\hspace*{1cm}$r$ represent the villager's answer to the question `Does the path to the right lead to the ruins?'.\\
+		\hspace*{1cm}$s$ represent the villager's answer to the question `What would you say if I asked whether the path to the right leads to the ruins?'\\ \\
 	\begin{center}
 		\begin{tabular}{ | p{2cm} | p{2cm} | p{5cm} | p{5cm} |}
-			\hline$p$ & $q$ & $r = (p \leftrightarrow \neg q) \oplus (\neg p \leftrightarrow q)$ & $(p \leftrightarrow \neg r) \oplus (\neg p \leftrightarrow  r)$ \\ \hline \hline
+			\hline$p$ & $q$ & $r = (p \leftrightarrow \neg q) \oplus (\neg p \leftrightarrow q)$ & $s = (p \leftrightarrow \neg r) \oplus (\neg p \leftrightarrow  r)$ \\ \hline \hline
 			$False$ & $False$ & $False$ & $False$\\ \hline 
 			$False$ & $True$ & $True$ & $True$\\ \hline
 			$True$ & $False$ & $True$ & $False$\\ \hline

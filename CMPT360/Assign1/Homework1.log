@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2015.9.5)  6 SEP 2015 20:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2015.9.5)  7 SEP 2015 12:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -59,21 +59,38 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layouthoffset=\dimen110
 \Gm@layoutvoffset=\dimen111
 \Gm@dimlist=\toks15
+)
+(/usr/share/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+\fancy@headwidth=\skip43
+\f@ncyO@elh=\skip44
+\f@ncyO@erh=\skip45
+\f@ncyO@olh=\skip46
+\f@ncyO@orh=\skip47
+\f@ncyO@elf=\skip48
+\f@ncyO@erf=\skip49
+\f@ncyO@olf=\skip50
+\f@ncyO@orf=\skip51
+)
+(/usr/share/texmf-dist/tex/latex/titling/titling.sty
+Package: titling 2009/09/04 v2.1d maketitle typesetting
+\thanksmarkwidth=\skip52
+\thanksmargin=\skip53
+\droptitle=\skip54
 ) (./Homework1.aux)
 \openout1 = `Homework1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -83,19 +100,19 @@ LaTeX Font Info:    ... okay on input line 8.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(36.135pt, 542.02501pt, 36.135pt)
-* v-part:(T,H,B)=(36.135pt, 722.7pt, 36.135pt)
+* h-part:(L,W,R)=(85.35826pt, 443.57848pt, 85.35826pt)
+* v-part:(T,H,B)=(85.35826pt, 624.25346pt, 85.35826pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=542.02501pt
-* \textheight=722.7pt
-* \oddsidemargin=-36.135pt
-* \evensidemargin=-36.135pt
-* \topmargin=-73.135pt
+* \textwidth=443.57848pt
+* \textheight=624.25346pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-23.91173pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=12.0pt
-* \footskip=30.0pt
+* \footskip=55.0pt
 * \marginparwidth=44.0pt
 * \marginparsep=10.0pt
 * \columnsep=10.0pt
@@ -110,77 +127,84 @@ LaTeX Font Info:    ... okay on input line 8.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <7> on input line 9.
+(Font)              <7> on input line 24.
 LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <6> on input line 18.
+(Font)              <6> on input line 33.
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--27
+Underfull \hbox (badness 10000) in paragraph at lines 39--42
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 39--42
+Underfull \hbox (badness 10000) in paragraph at lines 54--57
 
  []
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 53--57
+Underfull \hbox (badness 10000) in paragraph at lines 68--72
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 68--71
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 82--88
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 82--88
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 82--88
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 82--88
+Underfull \hbox (badness 10000) in paragraph at lines 83--86
 
  []
 
 [3
 
 ]
-Underfull \hbox (badness 2884) in paragraph at lines 148--148
+Underfull \hbox (badness 10000) in paragraph at lines 97--104
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--104
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--104
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--104
+
+ []
+
+
+Overfull \hbox (2.76009pt too wide) in paragraph at lines 105--112
+ [] 
+ []
+
+[4
+
+]
+Underfull \hbox (badness 2884) in paragraph at lines 164--164
 []$\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 p \OMS/cmsy/m/n/12 ! \OML/cmm/m/it/12 q\OT
 1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 $
  []
 
-[4] [5] (./Homework1.aux) ) 
+[5] [6] (./Homework1.aux) ) 
 Here is how much of TeX's memory you used:
- 791 strings out of 493109
- 12314 string characters out of 6140857
- 85488 words of memory out of 5000000
- 4306 multiletter control sequences out of 15000+600000
+ 981 strings out of 493109
+ 14495 string characters out of 6140857
+ 88280 words of memory out of 5000000
+ 4488 multiletter control sequences out of 15000+600000
  9092 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 26i,9n,32p,688b,189s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 26i,10n,43p,688b,286s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
 /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Homework1.pdf (5 pages, 67523 bytes).
+Output written on Homework1.pdf (6 pages, 68957 bytes).
 PDF statistics:
- 40 PDF objects out of 1000 (max. 8388607)
- 27 compressed objects within 1 object stream
+ 43 PDF objects out of 1000 (max. 8388607)
+ 29 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
