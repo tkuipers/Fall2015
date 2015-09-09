@@ -3,7 +3,7 @@
 
 #install apache
 apt-get update
-# apt-get install apache2
+apt-get install -y apache2
 apt-get install -y tomcat7
 if ! [ -L /var/www ]; then
   rm -rf /var/www
