@@ -2,6 +2,9 @@
 \usepackage[margin=3cm, footskip=55pt]{geometry}
 \usepackage{fancyhdr}
 \usepackage{titling}
+\usepackage{filecontents}
+\usepackage{multicol}
+
 \setlength{\droptitle}{-10em} 
 \pagestyle{empty}
 \pagestyle{fancy}
@@ -21,20 +24,133 @@
 }
 
 \begin{document}
-\maketitle
-\section*{Lab1A Questions}
-	\begin{enumerate}
-		\item Mystery.c ran a fork bomb on the computer.  A fork bomb is a program with the sole purpose of spawning another verison of itself.  It does this enough times that eventually, the computer will not function properly.
-		\item The man command looks up the manual for the given command.  It then prints it to the console for the user to look at using a simple interface.
-		\item Man Page Sections\begin{enumerate}
-			\item 1. Commands
-			\item 2. System Calls
-			\item 3. C Library Calls
-			\item 4. Special files (Devices)
-			\item 5. File Formats and Conventions
-			\item 6. Games
-			\item 7. Conventions and Miscellaneous
-			\item 8. System Management Commands
+	\maketitle
+	\section*{Lab1A Questions}
+		\begin{enumerate}
+			\item Mystery.c ran a fork bomb on the computer.  A fork bomb is a program with the sole purpose of spawning more versions of itself.  It does this enough times that eventually, the computer will not function properly.
+			\item The man command looks up the manual for the given command.  It then prints it to the console for the user to look at using a simple interface.
+			\item Man Page Sections\begin{enumerate}
+				\item 1. Commands
+				\item 2. System Calls
+				\item 3. C Library Calls
+				\item 4. Special files (Devices)
+				\item 5. File Formats and Conventions
+				\item 6. Games
+				\item 7. Conventions and Miscellaneous
+				\item 8. System Management Commands
+			\end{enumerate}
+			\item Fork creates a child process.
+			\item Fork resides in section 2 and 3. In section 2, the manual says that a child process is created.  In section three, the manual says that a new process is created.
+			\item Unistd.h defines miscellaneous symbolic constants and types and declares miscellaneous functions.
+			\item Unistd.h resides in section 7.
+			\item CHILD\_MAX is 7350.
 		\end{enumerate}
-	\end{enumerate}
+	\clearpage
+
+	\section*{Lab1B Questions}
+		\begin{enumerate}
+			\item List Items with Sections
+			\begin{multicols}{3}
+				 \begin{enumerate}fork 2 3posix 
+					\item[] waitpid 2 3posix 
+					\item[] execve 2 3posix 
+					\item[] exit 1posix 2 3 3posix 
+					\item[] open 1 2 3posix 
+					\item[] close 2 3posix 
+					\item[] read 1posix 2 3posix 
+					\item[] write 1 1posix 2 3posix 
+					\item[] lseek 2 3posix 
+					\item[] stat 1 2 3posix 
+					\item[] mkdir 1 1posix 2 3posix 
+					\item[] rmdir 1 1posix 2 3posix 
+					\item[] link 1 1posix 2 3posix 
+					\item[] ln 1 1posix 
+					\item[] unlink 1 1posix 2 3posix 
+					\item[] mount 2 8 
+					\item[] umount 2 8 
+					\item[] chdir 2 3posix 
+					\item[] fflush 3 3posix 
+					\item[] time 1posix 2 3posix 7 
+					\item[] ps2pdf 1 
+					\item[] man 1 1posix 7 
+					\item[] threads 3ssl 
+					\item[] kill 1 1posix 2 3posix 
+					\item[] mkdir 1 1posix 2 3posix 
+					\item[] chmod 1 1posix 2 3posix 
+					\item[] chown 1 1posix 2 3posix 
+					\item[] stdio.h 7posix 
+					\item[] stdlib.h 7posix 
+					\item[] mv 1 1posix 
+					\item[] rm 1 1posix 
+					\item[] cp 1 1posix 
+					\item[] bash 1 
+					\item[] sh 1 1posix 
+					\item[] zsh 1 
+					\item[] env 1 1posix 
+					\item[] lpr 1 
+					\item[] intro 1 2 3 4 5 6 7 8 
+					\item[] wc 1 1posix 
+				\end{enumerate}
+			\end{multicols}
+			\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
+			There are some from the posix guide and the default guide.  This is why things like mkdir can be in manual \#1 twice.  A simpler list is as follows:\\
+			\begin{multicols}{3}
+				\begin{enumerate}
+					\item[] fork 2 3 
+					\item[] waitpid 2 3 
+					\item[] execve 2 3 
+					\item[] exit 1 2 3 3 
+					\item[] open 1 2 3 
+					\item[] close 2 3 
+					\item[] read 1 2 3 
+					\item[] write 1 1 2 3 
+					\item[] lseek 2 3 
+					\item[] stat 1 2 3 
+					\item[] mkdir 1 1 2 3 
+					\item[] rmdir 1 1 2 3 
+					\item[] link 1 1 2 3 
+					\item[] ln 1 1 
+					\item[] unlink 1 1 2 3 
+					\item[] mount 2 8 
+					\item[] umount 2 8 
+					\item[] chdir 2 3 
+					\item[] fflush 3 3 
+					\item[] time 1 2 3 7 
+					\item[] ps2pdf 1 
+					\item[] man 1 1 7 
+					\item[] threads 3 
+					\item[] kill 1 1 2 3 
+					\item[] mkdir 1 1 2 3 
+					\item[] chmod 1 1 2 3 
+					\item[] chown 1 1 2 3 
+					\item[] stdio.h 7 
+					\item[] stdlib.h 7 
+					\item[] mv 1 1 
+					\item[] rm 1 1 
+					\item[] cp 1 1 
+					\item[] bash 1 
+					\item[] sh 1 1 
+					\item[] zsh 1 
+					\item[] env 1 1 
+					\item[] lpr 1 
+					\item[] intro 1 2 3 4 5 6 7 8 
+					\item[] wc 1 1
+				\end{enumerate}
+			\end{multicols}
+			\item Amount in Each Section
+			\begin{multicols}{3}
+				\begin{enumerate}
+					\item 1. 27
+					\item 2. 23
+					\item 3. 23
+					\item 4. 1
+					\item 5. 5
+					\item 6. 1
+					\item 7. 5
+					\item 8. 3
+				\end{enumerate}
+			\end{multicols}
+			\item \textit{\textdollar\textgreater lpr rmdir\textbackslash(1\textbackslash).pdf} tries to print the document `rmdir(1).pdf' file.  The backslashes are in this command because ( and ) are special characters that are used in bash scripting.
+			\item Shell scripting is extremely useful when you need to automate something that would take a lot of command line work.  For example, when I wipe my hard drive, it would be convenient to have an install script.  This script would, once I have installed my entire operating system, go through and set up my development environment by installing all of the programs I need, and grabbing my configuration files from my GitHub.
+		\end{enumerate}
 \end{document}
