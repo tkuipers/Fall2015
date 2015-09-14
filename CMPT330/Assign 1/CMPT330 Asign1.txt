@@ -1,0 +1,9 @@
+CMPT330 Assign 1
+September 28, 2015.
+
+1. Multiprogramming is when the computer runs multiple programs at the "same" time.  They cannot actually be running at the exact same time unless your computer has multiple cores in it's processor, or multiple processors, but the processor switches between tasks so quickly that it gives the illusion that they are running at the same time.  Arch Linux is the operating system on my personal computer.  It is a multiprogramming system because I don't have to wait for one process to complete before I start another one.
+
+2. 
+
+3. 	(a) Disable all interrupts - This should be handled by the kernal and not the user.  Disabling all interrupts could have big implications on the system and directly interacts with the hardware of the system, generally things that directly interact with system hardware should be handled by the kernal and not the user.
+	(b) Read the time of day - This should be run in user mode.  The time of day is something that a lot of users check to see
