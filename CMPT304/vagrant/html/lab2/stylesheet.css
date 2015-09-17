@@ -1,0 +1,12 @@
+body{
+	background-color: #FFD1D8;
+}
+img{ 
+   border:10px solid #021a40;
+}
+a:hover {
+	background-color: #FF704D;
+}
+p.first{
+	text-align: right;
+}
