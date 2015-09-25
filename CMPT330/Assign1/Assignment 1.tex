@@ -44,7 +44,7 @@
 		Superscalar processing is when there are multiple parts of a CPU that are built for certain functions.  The CPU then, instead of just pipelining it's processes, will decode the processes, put them in a holding buffer, and then the parts of CPU that specialize in certain areas will go back and check the holding buffer for things that they can do.  Through this, we can simulate parallel processing within the CPU.  The cost for this operation is complexity.  The program can run out f the order defined by the developer.  it is up to the hardware to make sure that the results are still the same.
 		\begin{enumerate}
 			\item One CPU - This program will have a run-time of 5 ms for P0, 10 for P1, and 20 for P2.  We can assume that this is our baseline for the following questions.  This makes the total time 35ms.
-			\item One superscalar CPU - These programs will have a maximum runtime of 5ms for P0, 10ms for P1, and 20ms for P2.  In a superscalar CPU there may be no speedup if the programs are a repeated set of instructions.  The minimum running time these programs have depends on the instruction set.  If there are n different sets of instructions and n different areas of the CPU, and the normal running time is t, the run-time for each of the programs is t/n.  This makes the total maximum time 35 seconds, and the minimum time 35/n.
+			\item One superscalar CPU - These programs will have a maximum runtime of 5ms for P0, 10ms for P1, and 20ms for P2.  In a superscalar CPU there may be no speedup if the programs are a repeated set of instructions.  The minimum running time these programs have depends on the instruction set.  If there are n different sets of instructions and n different areas of the CPU, and the normal running time is t, the run-time for each of the programs is t/n.  This makes the total maximum time 35 ms, and the minimum time 35/n.
 			\item Two CPUs - The programs will each have a run-time of 5ms for P0, 10ms for P1, and 20ms for P2.  In a two CPU machine, it will load P0 and P1 into each of the CPUs.  P0 will then finish executing and P2 will be loaded into the fist CPU.  P1 will then finish and nothing will happen.  P2 will then finish and we will have a total time of 25ms.  CPU 0: P0 + P2 = 25ms.  CPU 1: P1 = 10ms.
 			\item Two superscalar CPUs - These programs will have a maximum runtime of 5ms for P0, 10ms for P1, and 20ms for P2.  In a two CPU superscalar machine there may be no speedup.  The minimum running time these programs have depends on the instruction set.  If there are n different sets of instructions and n different areas of the CPU, and the normal running time is t, the run-time for each of the programs is t/n.  If everything has the minimum speedup, in this machine, it will load P0 and P1 into each of the CPUs.  P0 will then finish executing and P2 will be loaded into the fist CPU.  P1 will then finish and nothing will happen.  P2 will then finish and we will have a total time of 25ms.  CPU 0: P0 + P2 = 25ms.  CPU 1: P1 = 10ms.  If there is a substantial speedup, P0 and P1 will be loaded into their respective CPU's.  The time for P0 will be P0/n, and the time for P1 will be P1/n.  P2 will then be loaded into whichever of these is finished first, its time will be P2/n.  The minimum time will then be either (P0 + P2)/n or (P1+P2)/n.  Whichever is less.
 		\end{enumerate}
@@ -66,7 +66,7 @@
 			\end{enumerate}
 
 		\section*{Question 8}
-			The first command will offset the file descriptors by 4 bytes.  If the file contains a C string, the buffer will contain the C string without the first 4 characters.
+			The first command will offset the file descriptors by 4 bytes.  The entire buffer contains the string `CMPT 330 Rocks'  If the file contains a C string, the buffer will contain the C string without the first 4 characters and is 3 characters in length, the result being ` 330'.
 
 		\section*{Question 9}
 			Blocking also occurs when writing the disk.  The driver first tells the disk what to do when writing, then the controller starts the device, then when they controller is finished writing, it throws an interrupt using the bus-lines that it was given.  If we did not block the program during this time,  the CPU would end up sitting idle during a large portion of the disk writing process, making the entire computer less efficient.
@@ -75,10 +75,3 @@
 			First the arm must move from track 100 to track 50.  The arm takes 1 millisecond per track, giving us a total of 50 milliseconds.  The disk will then spin for 5 milliseconds to move to the beginning of the file on the disk.  This gives us a total of 55 milliseconds to find the file.  We then read at 100 mb/s for a 10 megabyte file, this will take 0.1 seconds = 100 milliseconds.  100 milliseconds of finding plus 55 milliseconds of reading will take a total of 155 milliseconds, or 0.155 seconds.
 
 \end{document} 
-
- 
-8. 
-
-9. 
-
-10. 
