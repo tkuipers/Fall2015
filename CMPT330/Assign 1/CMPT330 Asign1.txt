@@ -9,3 +9,4 @@ September 28, 2015.
 	(b) Read the time of day - This should be run in user mode.  The time of day is something that a lot of users check to see.  It is not something that the hardware needs to run and needs to be protected by layers of abstraction.
 	(c) Set the time of day - This should be run in user mode.  This parameter is not something that needs to be protected by a lot of abstraction because changing the time will not cause the operating system to break.
 	(d) Change the memory map - This should be done with the kernal.  Changing the memory map involves hardware and needs to be done by the OS only because if it is not done correctly, it will crash the computer.  
+
