@@ -1,0 +1,43 @@
+doctype html
+html
+	head
+		title Specifications | Cars
+		include ./source.jade
+	body
+		include ./head.jade
+		.specs
+			.specDiv(id="specDiv1")
+					a.fillDiv(href="#specDiv1")
+						.specInfo
+							.specTitle
+								p 1973-74 Chevy Nova
+							.specWriting
+								ul
+									li Top speed: 177 km/h (110 mph) (theoretical);
+									li 0- 60 mph: 9.1 s;
+									li 0- 100 km/h: 9.6 s;
+									li 1/4 mile drag time (402 m) 17 s (a-c simulation)
+							img.specPic(src="./1973Nova.jpg")
+			.specDiv(id="specDiv2")
+					a.fillDiv(href="#specDiv2")
+						.specInfo
+							.specTitle
+								p 1973-74 Pontiac Bonneville
+							.specWriting
+								ul
+									li Top speed: 175 km/h / 109 mph;
+									li 0-60 mph: 11.3 s;
+									li 0-100 km/h: 12 s;
+							img.specPic(src="./1979Bonneville.jpg")
+			.specDiv(id="specDiv3")
+					a.fillDiv(href="#specDiv3")
+						.specInfo
+							.specTitle
+								p 1988 Alpha 7500
+							.specWriting
+								ul
+									li Top speed: 180 km/h / 112 mph;
+									li 0-60 mph: 10.1 s;
+									li 0-100 km/h: 10.7 s;
+							img.specPic(src="./1988Alpha75.jpg")
+		include ./footer.jade

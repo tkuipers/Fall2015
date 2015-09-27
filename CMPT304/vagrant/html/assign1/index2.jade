@@ -1,0 +1,16 @@
+doctype html
+html
+	head
+		title Home | Cars
+		include ./source.jade
+	body
+		include ./head.jade
+
+		h2 Welcome to my page about cars!
+
+		img.center(src="beater.jpg" usemap="#carmap" alt="Beater Car" title="Beater Car")
+		map(name="carmap")
+			a(shape="rect" coords="681,174,798,82" href="https://en.wikipedia.org/wiki/Window" alt="A Window" title="A Window")
+			a(shape="circle" coords="541,384,60" href="https://en.wikipedia.org/wiki/Wheel" alt="A Wheel" title="A Weel")
+			a(shape="poly" coords="87,240,391,174,645,180,307,268" href="https://en.wikipedia.org/wiki/Hood_%28vehicle%29" alt="A Hood" title="A Hood")
+		include ./footer.jade

@@ -1,14 +1,203 @@
-/*Date Modified: Sept 22, 2015 */
+/*Date Modified: Sept 26, 2015 */
+/*Set the Background image */
 body {
   font: 100% Helvetica, sans-serif;
-  color: #333;
+  color: #FFF;
   background-image: url("background.jpg");
-  background-size: 100%; }
+  background-size: 100%;
+  overflow: hidden; }
 
+/*CSS Styles for the head */
 .head {
   position: relative;
-  width: 100px;
+  font-size: 2em;
   height: auto;
-  background-color: #8B008B; }
+  text-align: center;
+  background-color: rgba(139, 0, 139, 0.8);
+  margin: 20px 20px 20px 20px; }
+
+/*CSS styles for centering tables (used for the table containing links in the head */
+table.center {
+  margin-left: auto;
+  margin-right: auto; }
+
+/*Float table right */
+table.right {
+  float: right; }
+
+/* The part of the table containing the links (the background is originally set to a 0x0 background so that it can grow) */
+.headInnerDiv {
+  font: 100% Helvetica, sans-serif;
+  padding: 10px 30px 10px 10px;
+  transition: 1.5s ease-in-out;
+  background-image: url("circle.png");
+  background-repeat: no-repeat;
+  background-size: 0px 0px; }
+
+/* Modify a link to make it fill it's containing div */
+a.fillDiv {
+  display: block;
+  color: #FFF;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  text-decoration: none; }
+
+/* prevent the link from appearing a different color if it's visited */
+a.fillDiv:visited {
+  color: #FFF; }
+
+a.fillDiv:link {
+  color: #FFF; }
+
+/* make the cirle move it's position while growing.  animation takes 1.5 seconds */
+.headInnerDiv:hover {
+  background-color: #8b00ff;
+  background-position: right center;
+  background-size: 0.9em 0.9em;
+  transition: 1.5s ease-in-out; }
+
+/* for page titles */
+h2 {
+  background-color: rgba(0, 0, 81, 0.8);
+  border: 3px solid #000;
+  color: #FFF;
+  text-align: center;
+  position: relative; }
+
+/* for centered images */
+img.center {
+  margin-left: auto;
+  margin-right: auto;
+  display: block; }
+
+/* the container containing the "Recipe" cards */
+.specs {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  font: 100% "Courier New", Courier, monospace; }
+
+/* the "Recipe" card */
+.specDiv {
+  width: 33%;
+  height: 15em;
+  background-color: rgba(0, 0, 81, 0.8);
+  margin: 0 auto 0 auto;
+  display: block;
+  text-align: center;
+  border: 5px solid #000;
+  transition: 0.25s ease-in-out;
+  overflow: hidden; }
+
+/* The settings for the picture on the card */
+.specPic {
+  width: 33%;
+  height: 66%;
+  position: relative;
+  float: right;
+  margin: 5px 5px 5px 5px;
+  border: 2px solid #8b00ff; }
+
+/* the wirting on the card */
+.specWriting {
+  float: left;
+  text-align: left;
+  width: 63%; }
+
+/* the title on the card */
+.specTitle {
+  width: 100%;
+  height: 10%;
+  text-transform: uppercase;
+  text-align: center;
+  border: 2px solid #000;
+  margin: 0 0 0 0; }
+
+/* the bottom div */
+#specDiv1 {
+  position: absolute;
+  z-index: 0;
+  margin-top: 0px;
+  margin-left: 0px; }
+
+/* when it is hovered */
+#specDiv1:hover {
+  z-index: 100;
+  background-color: #8b00ff; }
+
+/* when it is the target */
+#specDiv1:target {
+  z-index: 90;
+  background-color: #8b00ff; }
+
+/* the second card */
+#specDiv2 {
+  position: absolute;
+  z-index: 10;
+  margin-top: 50px;
+  margin-left: 50px; }
+
+/* Hovering and targeting the second card */
+#specDiv2:hover {
+  z-index: 100;
+  background-color: #8b00ff; }
+
+#specDiv2:target {
+  z-index: 90;
+  background-color: #8b00ff; }
+
+/* all css for the third card */
+#specDiv3 {
+  position: absolute;
+  z-index: 20;
+  margin-top: 100px;
+  margin-left: 100px; }
+
+#specDiv3:hover {
+  z-index: 100;
+  background-color: #8b00ff; }
+
+#specDiv3:target {
+  z-index: 90;
+  background-color: #8b00ff; }
+
+/* The slogan on the third page */
+.niceSaying {
+  border: 3px solid #000;
+  background-color: rgba(139, 0, 139, 0.8);
+  text-align: right;
+  padding: 0px 5px 5px 5px;
+  width: 300px;
+  font: 100% "Courier New", Courier, monospace; }
+
+/* the table on the makers page */
+table.makers {
+  border-collapse: collapse;
+  transition: 0.75s ease-in-out;
+  border: 3px solid #000; }
+
+tr.makers {
+  border-top: 1px solid white;
+  background-color: rgba(0, 0, 81, 0.8);
+  transition: 0.75s ease-in-out; }
+
+tr.makers:hover {
+  background-color: #000051;
+  transition: 0.75s ease-in-out; }
+
+th.makers {
+  background-color: rgba(139, 0, 139, 0.8);
+  text-transform: uppercase;
+  width: 10em; }
+
+.footer {
+  border: 3px solid #000;
+  text-align: left center;
+  background-color: rgba(139, 0, 139, 0.8);
+  margin-bottom: 0px;
+  position: absolute;
+  bottom: 5px;
+  width: 98%; }
 
 /*# sourceMappingURL=stylesheet.css.map */
