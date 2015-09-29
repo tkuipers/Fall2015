@@ -1,0 +1,220 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.7.27)  29 SEP 2015 09:46
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**\nonstopmode \input{Assign2.tex}
+(./Assign2.tex (/usr/share/texlive/texmf-dist/tex/latex/extsizes/extarticle.cls
+Document Class: extarticle 1996/10/08 v1.0 Non Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/exscale.sty
+Package: exscale 2007/10/29 v2.1h Standard LaTeX package exscale
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 52.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 52.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 52.
+\big@size=\dimen102
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen103
+)
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count87
+\Gm@cntv=\count88
+\c@Gm@tempcnt=\count89
+\Gm@bindingoffset=\dimen104
+\Gm@wd@mp=\dimen105
+\Gm@odd@mp=\dimen106
+\Gm@even@mp=\dimen107
+\Gm@layoutwidth=\dimen108
+\Gm@layoutheight=\dimen109
+\Gm@layouthoffset=\dimen110
+\Gm@layoutvoffset=\dimen111
+\Gm@dimlist=\toks15
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+\fancy@headwidth=\skip43
+\f@ncyO@elh=\skip44
+\f@ncyO@erh=\skip45
+\f@ncyO@olh=\skip46
+\f@ncyO@orh=\skip47
+\f@ncyO@elf=\skip48
+\f@ncyO@erf=\skip49
+\f@ncyO@olf=\skip50
+\f@ncyO@orf=\skip51
+)
+(/usr/share/texlive/texmf-dist/tex/latex/titling/titling.sty
+Package: titling 2009/09/04 v2.1d maketitle typesetting
+\thanksmarkwidth=\skip52
+\thanksmargin=\skip53
+\droptitle=\skip54
+) (./Assign2.aux)
+\openout1 = `Assign2.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(142.26378pt, 329.76744pt, 142.26378pt)
+* v-part:(T,H,B)=(142.26378pt, 510.44243pt, 142.26378pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=329.76744pt
+* \textheight=510.44243pt
+* \oddsidemargin=69.99379pt
+* \evensidemargin=69.99379pt
+* \topmargin=32.99379pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=55.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Font Info:    External font `cmex7' loaded for size
+(Font)              <7> on input line 24.
+LaTeX Font Info:    External font `cmex7' loaded for size
+(Font)              <6> on input line 28.
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--45
+
+ []
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 56--60
+
+ []
+
+[2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 71--74
+
+ []
+
+[4
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 85--92
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--92
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--92
+
+ []
+
+
+Overfull \hbox (116.57112pt too wide) in paragraph at lines 93--100
+ [] 
+ []
+
+[5
+
+] [6]
+Overfull \hbox (72.58752pt too wide) in paragraph at lines 132--140
+[] 
+ []
+
+
+Overfull \hbox (72.58752pt too wide) in paragraph at lines 141--149
+[] 
+ []
+
+
+Underfull \hbox (badness 2884) in paragraph at lines 152--152
+[]$\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 p \OMS/cmsy/m/n/12 ! \OML/cmm/m/it/12 q\OT
+1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 $
+ []
+
+
+Overfull \hbox (72.58752pt too wide) in paragraph at lines 150--158
+[] 
+ []
+
+
+Overfull \hbox (72.58752pt too wide) in paragraph at lines 159--167
+[] 
+ []
+
+[7] (./Assign2.aux) ) 
+Here is how much of TeX's memory you used:
+ 982 strings out of 494985
+ 14694 string characters out of 6180356
+ 81717 words of memory out of 5000000
+ 4241 multiletter control sequences out of 15000+600000
+ 9092 words of font info for 33 fonts, out of 8000000 for 9000
+ 36 hyphenation exceptions out of 8191
+ 26i,10n,43p,686b,330s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on Assign2.pdf (7 pages, 68666 bytes).
+PDF statistics:
+ 48 PDF objects out of 1000 (max. 8388607)
+ 33 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
