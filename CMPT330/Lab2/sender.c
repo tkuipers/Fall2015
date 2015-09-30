@@ -9,8 +9,18 @@
 void printUsage(char* pname){
 	printf("USAGE %s [-­v] inputFile\n", pname);
 }
-int main(int argc, char *argv[]) {
-	// argv[0][5] = 65;
+int run(int argc, char* argv[]);
+int main(int argc, char *argv[]){
+ 	int id=fork();
+	if(id==0){
+		return run(argc, argv);
+	}
+	else{
+		return 0;	
+	}
+	/* return (int)popen(run(argc, argv), "r"); */
+}
+int run(int argc, char *argv[]) {
 	int debugging = 0;
 	char* location = malloc(3000);
 	if(argv[1]){
@@ -24,7 +34,9 @@ int main(int argc, char *argv[]) {
 	}
 
 
+
 	if(debugging){
+		printf("Argv[0]: %s\n", argv[0]);
 		if(argv[2]){
 			strcpy(location, argv[2]);
 			if(debugging){
@@ -46,28 +58,19 @@ int main(int argc, char *argv[]) {
 			printf("Location: %s\n", location);
 		}
 	}
-	// char* cleanLocation = malloc(3000);
-	// strcpy(cleanLocation, location);
-	// char* string = (char*)malloc(3000);
-	char kdkdk[] = {'B', 'I', 'G', '\0'};
 	char * string =  strcat(argv[0],  location);
-	printf("Location Name = %s\n", location);
-	// printf("CleanLocation Name = %s\n", cleanLocation);
-	printf("Process Name = %s\n", string);
+	/* printf("The Process Name is: %s\n", string); */
 	prctl(PR_SET_NAME, string);
 	if( access( location, F_OK ) != -1 ) {
-	    // file exists
-	    printf("Found File\n");
-	} else {
+		if(debugging){
+	    	printf("Found File\n");
+		}
+	}
+	else {
 		printf("Sorry, I could not find the file you are requesting\n");
 		return 1;
-	    // file doesn't exist
 	}
 	free(location);
-	sleep(10);
-	// printf("%s", argv[0]);
-	// free(location);
+	sleep(30);
+	return 0;
 }
-// int main() {
-	// return 0;
-// }

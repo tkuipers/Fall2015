@@ -6,67 +6,116 @@
 //
 
 #include "common.h"
+void printUsage(char* pname){
+	printf("USAGE %s [-­v] outputFile\n", pname);
+}
 void chopN(char *str, size_t n)
 {
-    if(n == 0 || str == 0){
-    	return;
-    }
-    size_t len = strlen(str);
-    if (n > len)
-        return;  // Or: n = len;
-    memmove(str, str+n, len - n + 1);
+		if(n == 0 || str == 0){
+			return;
+		}
+		size_t len = strlen(str);
+		if (n > len)
+				return;
+		memmove(str, str+n, len - n + 1);
 }
 
 char *trimwhitespace(char *str)
 {
-  char *end;
+	char *end;
+	while(isspace(*str)) str++;
 
-  // Trim leading space
-  while(isspace(*str)) str++;
+	if(*str == 0)
+		return str;
 
-  if(*str == 0)  // All spaces?
-    return str;
+	end = str + strlen(str) - 1;
+	while(end > str && isspace(*end)) end--;
 
-  // Trim trailing space
-  end = str + strlen(str) - 1;
-  while(end > str && isspace(*end)) end--;
+	*(end+1) = 0;
 
-  // Write new null terminator
-  *(end+1) = 0;
-
-  return str;
+	return str;
 }
 
-int main() {
+
+
+int main(int argc, char *argv[]) {
+	int debugging = 0;
+	char* location = malloc(3000);
+	if(argv[1]){
+		if(strcmp(argv[1], "-v") == 0){
+			debugging = 1;
+		}
+	}
+	else{
+		printUsage(argv[0]);
+		return 1;
+	}
+
+
+	if(debugging){
+		if(argv[2]){
+			strcpy(location, argv[2]);
+			if(debugging){
+				printf("Location: %s\n", location);
+			}
+		}
+		else{
+			printUsage(argv[0]);
+			return 1;
+		}
+	}
+	else{
+		strcpy(location, argv[1]);
+		if(argv[2]){
+			printUsage(argv[0]);
+			return 1;
+		}
+		if(debugging){
+			printf("Location: %s\n", location);
+		}
+	}
+
 	FILE *fp;
 	char file_type[40];
-	// filepath = system("ps -ef | grep \"./sender\" | sed -r 's/^.{32}//'");
-	fp = popen("ps -eF --cols 3000| grep \"./sender\" | sed -r 's/^.{72}//'", "r");
-	if (fp == NULL) {
-	    printf("Failed to run ps command\n" );
-	    return 1;
+	fp = popen("ps -eF --cols 3000| grep \"./sender\" | sed -r 's/^.{72}//' | sed 's/\\s.*$//' | grep '[a-zA-Z0-9]'", "r");// | sed 's/\\s.*$//'", "r");// |  grep -P  \"^(/[^/ ]*)+/?$\"", "r");
+	/* fp = popen("ps -eF --cols 3000| grep \"./sender\" | sed -r 's/^.{72}//' |  grep -P  \"^/k(/[^/ ]*)+/?$\"", "r"); */
+	if (!fp) {
+		printf("Failed to run ps command.\n");
+		return 1;
 	}
-	char* firstline = fgets(file_type, sizeof(file_type), fp);
-	printf("FIRSTLINE = %s\n", firstline);
-	printf("FIRSTLINE AFTER CHOP = %s\n", firstline);
 
+
+	/* printf("The return of the bash command: %s\n", fgets(file_type, sizeof(file_type), fp)); */
+	char* firstline = fgets(file_type, sizeof(file_type), fp);
+	if(debugging){
+		printf("The Location grabbed from the sender: %s\n", firstline);
+	}
+	if(strcmp(trimwhitespace(firstline), "ender") == 0){
+		printf("Looks like the sender isn't running.  Please run the sender before trying to recieve a message\n");
+		return 1;
+	}
 	int c;
 	FILE *file;
-	printf("FIRSTLINE BEFORE OPEN = %s\n", firstline);
 	char* cleanLoc = malloc(3000);
 	strcpy(cleanLoc, firstline);
 	firstline = trimwhitespace(cleanLoc);
 	file = fopen(firstline, "r");
-	printf("%s\n", file);
+	FILE *f = fopen(location, "w");
+	if (!f) {
+		printf("Error opening file for writing.  Do you have write permissions in the directory you are trying to save it in?\n");
+		if(debugging){
+			printf("the process: %s", location);
+		}
+		return 1;
+	}
+
 	if (file) {
-		printf("FOUND THE FILE\n");
 		while ((c = getc(file)) != EOF)
-			putchar(c);
+			putc(c, f);
 		fclose(file);
 	}
 	else{
 		printf("Could not find the file that you are requesting.  Are the sender an the reciever in the same folder? If not, are you using absolute paths?\n");
-		perror("Error");
 		return 1;
 	}
 	free( cleanLoc);
