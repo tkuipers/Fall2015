@@ -6,10 +6,12 @@
 //
 
 #include "common.h"
+//prints how to use this command
 void printUsage(char* pname){
 	printf("USAGE %s [-­v] inputFile\n", pname);
 }
 int run(int argc, char* argv[]);
+//runs the command
 int main(int argc, char *argv[]){
 	int id=fork();
 	if(id==0){
@@ -19,6 +21,8 @@ int main(int argc, char *argv[]){
 		return 0;	
 	}
 }
+
+//sends the signal (is run as a backgrouund process)
 int run(int argc, char *argv[]) {
 	int debugging = 0;
 	char* location = malloc(3000);

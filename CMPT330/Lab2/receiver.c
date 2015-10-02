@@ -6,9 +6,11 @@
 //
 
 #include "common.h"
+//prints the how to of using this command
 void printUsage(char* pname){
 	printf("USAGE %s [-­v] outputFile\n", pname);
 }
+meakes a string shorter
 void chopN(char *str, size_t n)
 {
 		if(n == 0 || str == 0){
@@ -23,7 +25,7 @@ void chopN(char *str, size_t n)
 
 
 
-
+//receives a string from the sender program 
 int main(int argc, char *argv[]) {
 	int debugging = 0;
 	char* location = malloc(3000);

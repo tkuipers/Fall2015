@@ -7,7 +7,7 @@
 
 #include "common.h"
 
-
+// Takes out whitespace from the beginning and end of the string that is passed in
 char *trimwhitespace(char *str)
 {
 	char *end;
