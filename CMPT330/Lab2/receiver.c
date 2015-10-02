@@ -1,6 +1,6 @@
 //
-//  YOUR NAME HERE!
-//  YOUR ID HERE!
+//  Tyler Kuipers
+//  120065
 // 
 //  receiver.c
 //
@@ -20,21 +20,7 @@ void chopN(char *str, size_t n)
 		memmove(str, str+n, len - n + 1);
 }
 
-char *trimwhitespace(char *str)
-{
-	char *end;
-	while(isspace(*str)) str++;
 
-	if(*str == 0)
-		return str;
-
-	end = str + strlen(str) - 1;
-	while(end > str && isspace(*end)) end--;
-
-	*(end+1) = 0;
-
-	return str;
-}
 
 
 
@@ -76,7 +62,7 @@ int main(int argc, char *argv[]) {
 	}
 
 	FILE *fp;
-	char file_type[40];
+	char file_type[400];
 	fp = popen("ps -eF --cols 3000| grep \"./sender\" | sed -r 's/^.{72}//' | sed 's/\\s.*$//' | grep '[a-zA-Z0-9]'", "r");// | sed 's/\\s.*$//'", "r");// |  grep -P  \"^(/[^/ ]*)+/?$\"", "r");
 	/* fp = popen("ps -eF --cols 3000| grep \"./sender\" | sed -r 's/^.{72}//' |  grep -P  \"^/k(/[^/ ]*)+/?$\"", "r"); */
 	if (!fp) {
