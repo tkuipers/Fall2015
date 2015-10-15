@@ -22,7 +22,7 @@ EXEC= ChocolateFactory
 
 .PHONY: depend clean
 
-all:    $(EXEC)
+all:    clean $(EXEC)
 
 $(EXEC): $(OBJS) 
 	$(CC) $(CFLAGS) $(INCLUDES) -o $(EXEC) $(OBJS) $(LFLAGS) $(LIBS)

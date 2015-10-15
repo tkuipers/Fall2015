@@ -1,28 +1,27 @@
+//
+//  ChocolateFactory.h
+//  ChocolateFactory
+//  CMPT 330 -- Fall 2013
+//
+//  Tyler Kuipers
+//  October 14, 2015
+//
 #include "ChocolateFactory.h"
-void *oompaLoompa(void* info) {
-	candy_t *data = (candy_t *)info;
-	for (int i = 1; i < data->num + 1; ++i) {
-		// printf("Making a %s candy.\n", data->color);
-		// lock the mutex
-		// check if the buffer is full
-		// wait for it to empty
-		// add a thing
+void *oompa(void* info) {
+	for (int i = 1; i < ((candy_struct *)info)->num + 1; ++i) {
+		// printf("On loop %d\n", i);
 		pthread_mutex_lock(&mutex);
-		if (!isFull()) {
-			printf("oompaLoompa %s is inserting onto buffer\n", data->color);
-			candy_t *info = malloc(sizeof(candy_t));
-			info->color = data->color;
-			info->num = i;
-			insertCandy(info);
-			// printf("%d\n", i);
+		if (!fullBuffer()) {
+			candy_struct *oompaInfo = malloc(sizeof(candy_struct));
+			oompaInfo->color = ((candy_struct *)info)->color;
+			oompaInfo->num = i;
+			// printf("inserting candy:\n\tColor: %s\n\tNumber: %d\n", oompaInfo->color, oompaInfo->num);
+			insertCandy(oompaInfo);
 		}
 		else {
 			--i;
 		}
 		pthread_mutex_unlock(&mutex);
-		// 
 	}
-	// here I loop and try to add candies to the buffer once i have created the correct number of candies i can exit.
-	free(data);
 	pthread_exit(NULL);
 }
